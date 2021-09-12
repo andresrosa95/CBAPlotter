@@ -1,0 +1,342 @@
+$color-fondo: linear-gradient(to right, black, gray,black);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: 'Acme', sans-serif;
+    text-align: center; 
+    background-image: url(../assets/img/fondo.png) ;
+    background-repeat: repeat;
+    animation-duration: 1.5s;
+    animation-name: aparecer;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes backInDown {
+    0% {
+        transform: translateY(-1200px) scale(2);
+        opacity: .7;
+    }
+
+    80% {
+        transform: translateY(0px) scale(.7);
+        opacity: .7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.backInDown {
+    -webkit-animation: backInDown 1.5s;
+    animation: backInDown 1.5s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+#principalIndex {
+    display: grid;
+    align-items: left;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "carrusel carrusel carrusel"
+        "tituloCambioColor tituloCambioColor tituloCambioColor"
+        "imagenCambioColor imagenCambioColor textoCambioColor "
+        "tituloGraficaVehicular tituloGraficaVehicular tituloGraficaVehicular"
+        "imagenGraficaVehicular imagenGraficaVehicular textoGraficaVehicular"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2vh;
+    height: 100vh;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    #principalIndex {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav "
+            "header header"
+            "carrusel carrusel"
+            "tituloCambioColor tituloCambioColor"
+            "imagenCambioColor textoCambioColor"
+            "tituloGraficaVehicular tituloGraficaVehicular"
+            "imagenGraficaVehicular textoGraficaVehicular"
+            "footer footer";
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #principalIndex {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "carrusel"
+            "tituloCambioColor"
+            "imagenCambioColor"
+            "textoCambioColor"
+            "tituloGraficaVehicular"
+            "imagenGraficaVehicular"
+            "textoGraficaVehicular"
+            "footer";
+    }
+}
+
+#principalTrabajos {
+    display: grid;
+    align-items: left;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "cambioColor cambioColor cambioColor"
+    "fila1 fila1 fila1"
+    "graficaVehicular graficaVehicular graficaVehicular"
+    "fila2 fila2 fila2"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2vh;
+    height: 100vh;
+    margin: 0;
+}
+
+#graficaVehicular {
+    grid-area: graficaVehicular;
+}
+
+#cambioColor {
+    grid-area: cambioColor;
+}
+
+#carouselExampleControls {
+    grid-area: carrusel;
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+#imagenPortada {
+    grid-area: imagenPortada;
+}
+
+#tituloCambioColor {
+    grid-area: tituloCambioColor;
+}
+
+section#imagenCambioColor {
+    grid-area: imagenCambioColor;
+}
+
+article#textoCambioColor {
+    grid-area: textoCambioColor;
+}
+
+#tituloGraficaVehicular {
+    grid-area: tituloGraficaVehicular;
+}
+
+section#imagenGraficaVehicular {
+    grid-area: imagenGraficaVehicular;
+}
+
+article#textoGraficaVehicular {
+    grid-area: textoGraficaVehicular;
+}
+
+.links {
+    background-image: $color-fondo;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 10px 5px 15px 5px;
+    text-align: center;
+    z-index: 2;
+}
+
+.lista__links {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+.lista__links__elementos {
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    color: blanchedalmond;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contacto {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.contacto__elemento {
+    margin: 50px;
+    display: inline-block;
+    background-color: rgb(70, 70, 70);
+    color: #000000;
+    width: 320px;
+    height: 320px;
+}
+
+.fila1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 5vh;
+    grid-area: fila1;
+    justify-items:center;
+}
+
+.fila2 {
+    @extend .fila1;
+    grid-area: fila2;
+}
+
+$ancho: 400px;
+$alto: 300px;
+
+.imagen__trabajo {
+    height: $alto;
+    width: $ancho;
+    transition: 1.5s;
+}
+
+.imagen__trabajo:hover {
+    height: $alto*1.5;
+    width: $ancho*1.5;
+}
+
+input:focus {
+    width: 150px;
+    font-size: 20px;
+}
+
+
+#imagenUpGrafica {
+    width: 650px;
+    height: 400px;
+    transition: 1.5s;
+}
+
+#imagenUpGrafica:hover {
+    height: 550px;
+    width: 800px;
+    transform: translate(150px, 0px);
+}
+
+
+#titulo {
+    display: inline-block;
+    font-size: 75px;
+    color: #22bdfa;
+    text-decoration: underline;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    width: 600px;
+    height: 150px;
+    margin: 20px 30px 25px 5px;
+    padding: 15px 10px 15px 5px;
+    animation-duration: 1s;
+    animation-name: backInDown;
+}
+
+.subtitulo {
+    color: rgba(255, 0, 43, 0.603);
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+
+h2 {
+    color: seashell;
+    background-image: $color-fondo;
+}
+
+h3 {
+    color: seashell;
+    background-image: $color-fondo;
+}
+
+ul {
+    ul {
+        position: absolute;
+        display: none;
+        li {
+        display: block;
+        }
+    }
+        li:hover ul {
+            display: block;
+            background-color: rgb(70, 70, 70);
+            width: 270px;
+}
+        li a:hover {
+            background-color: blanchedalmond;
+            color: #22bdfa;
+        }
+        }
+
+a {
+    text-decoration: none;
+    color: coral;
+}
+
+.preguntasFrecuentes {
+    color: seashell;
+    text-align: left;
+    list-style-type: disc;
+}
+
+article {
+    color: seashell;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right, black, gray,black);
+    bottom: 0%;
+    width: 100%;
+    grid-area: footer;
+}
+
+.sector {
+    color: #fffb0f;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    background-color: rgb(70, 70, 70);
+}
+
+p {
+    color: seashell;
+}
