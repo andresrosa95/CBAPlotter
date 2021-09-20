@@ -9,7 +9,7 @@ body {
     font-style: oblique;
     font-weight: bold;
     font-size: 110%;
-    font-family: 'Acme', sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center; 
     background-image: url(../assets/img/fondo.png) ;
     background-repeat: repeat;
@@ -119,6 +119,74 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+#principalNosotros {
+    display: grid;
+    align-items: left;
+    grid-template-areas:
+      "nav nav nav"
+      "header header header"
+      "textoNosotros textoNosotros textoNosotros"
+      "imagenNosotros imagenNosotros imagenNosotros"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2vh;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #principalContacto {
+    display: grid;
+    align-items: left;
+    grid-template-areas:
+      "nav nav nav"
+      "header header header"
+      "tituloFormulario tituloFormulario tituloFormulario"
+      "contenidoFormulario contenidoFormulario contenidoFormulario"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2vh;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #principalFaq {
+    display: grid;
+    align-items: left;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "accordion accordion accordion"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 2vh;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .accordion {
+    grid-area: accordion;
+  }
+  
+  .contacto {
+    grid-area: contenidoFormulario;
+  }
+  
+  #tituloFormulario {
+    grid-area: tituloFormulario;
+  }
+  
+  #textoNosotros {
+    grid-area: textoNosotros;
+  }
+  
+  #imagenNosotros {
+    grid-area: imagenNosotros;
+  }
+  
 
 #graficaVehicular {
     grid-area: graficaVehicular;
@@ -242,7 +310,6 @@ input:focus {
     font-size: 20px;
 }
 
-
 #imagenUpGrafica {
     width: 650px;
     height: 400px;
@@ -254,7 +321,6 @@ input:focus {
     width: 800px;
     transform: translate(150px, 0px);
 }
-
 
 #titulo {
     display: inline-block;
