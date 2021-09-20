@@ -1,237 +1,106 @@
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   font-style: oblique;
   font-weight: bold;
   font-size: 110%;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Acme', sans-serif;
   text-align: center;
   background-image: url(../assets/img/fondo.png);
   background-repeat: repeat;
   animation-duration: 1.5s;
-  animation-name: aparecer;
-}
+  animation-name: aparecer; }
 
 @keyframes aparecer {
   0% {
-    opacity: 0;
-  }
-
+    opacity: 0; }
   100% {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes backInDown {
   0% {
     transform: translateY(-1200px) scale(2);
-    opacity: 0.7;
-  }
-
+    opacity: .7; }
   80% {
     transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
+    opacity: .7; }
   100% {
     transform: scale(1);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 .backInDown {
   -webkit-animation: backInDown 1.5s;
   animation: backInDown 1.5s;
   -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-}
+  animation-timing-function: ease-out; }
 
 #principalIndex {
   display: grid;
   align-items: left;
-  grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "carrusel carrusel carrusel"
-    "tituloCambioColor tituloCambioColor tituloCambioColor"
-    "imagenCambioColor imagenCambioColor textoCambioColor "
-    "tituloGraficaVehicular tituloGraficaVehicular tituloGraficaVehicular"
-    "imagenGraficaVehicular imagenGraficaVehicular textoGraficaVehicular"
-    "footer footer footer";
+  grid-template-areas: "nav nav nav" "header header header" "carrusel carrusel carrusel" "tituloCambioColor tituloCambioColor tituloCambioColor" "imagenCambioColor imagenCambioColor textoCambioColor " "tituloGraficaVehicular tituloGraficaVehicular tituloGraficaVehicular" "imagenGraficaVehicular imagenGraficaVehicular textoGraficaVehicular" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
   height: 100vh;
-  margin: 0;
-}
+  margin: 0; }
 
 @media only screen and (max-width: 1024px) {
   #principalIndex {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "nav nav "
-      "header header"
-      "carrusel carrusel"
-      "tituloCambioColor tituloCambioColor"
-      "imagenCambioColor textoCambioColor"
-      "tituloGraficaVehicular tituloGraficaVehicular"
-      "imagenGraficaVehicular textoGraficaVehicular"
-      "footer footer";
-  }
-}
+    grid-template-areas: "nav nav " "header header" "carrusel carrusel" "tituloCambioColor tituloCambioColor" "imagenCambioColor textoCambioColor" "tituloGraficaVehicular tituloGraficaVehicular" "imagenGraficaVehicular textoGraficaVehicular" "footer footer"; } }
 
 @media only screen and (max-width: 768px) {
   #principalIndex {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "nav"
-      "header"
-      "carrusel"
-      "tituloCambioColor"
-      "imagenCambioColor"
-      "textoCambioColor"
-      "tituloGraficaVehicular"
-      "imagenGraficaVehicular"
-      "textoGraficaVehicular"
-      "footer";
-  }
-}
+    grid-template-areas: "nav" "header" "carrusel" "tituloCambioColor" "imagenCambioColor" "textoCambioColor" "tituloGraficaVehicular" "imagenGraficaVehicular" "textoGraficaVehicular" "footer"; } }
 
 #principalTrabajos {
   display: grid;
   align-items: left;
-  grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "cambioColor cambioColor cambioColor"
-    "fila1 fila1 fila1"
-    "graficaVehicular graficaVehicular graficaVehicular"
-    "fila2 fila2 fila2"
-    "footer footer footer";
+  grid-template-areas: "nav nav nav" "header header header" "cambioColor cambioColor cambioColor" "fila1 fila1 fila1" "graficaVehicular graficaVehicular graficaVehicular" "fila2 fila2 fila2" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
   height: 100vh;
-  margin: 0;
-}
-
-#principalNosotros {
-  display: grid;
-  align-items: left;
-  grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "textoNosotros textoNosotros textoNosotros"
-    "imagenNosotros imagenNosotros imagenNosotros"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 2vh;
-  height: 100vh;
-  margin: 0;
-}
-
-#principalContacto {
-  display: grid;
-  align-items: left;
-  grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "tituloFormulario tituloFormulario tituloFormulario"
-    "contenidoFormulario contenidoFormulario contenidoFormulario"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 2vh;
-  height: 100vh;
-  margin: 0;
-}
-
-#principalFaq {
-  display: grid;
-  align-items: left;
-  grid-template-areas:
-  "nav nav nav"
-  "header header header"
-  "accordion accordion accordion"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 2vh;
-  height: 100vh;
-  margin: 0;
-}
-
-.accordion {
-  grid-area: accordion;
-}
-
-.contacto {
-  grid-area: contenidoFormulario;
-}
-
-#tituloFormulario {
-  grid-area: tituloFormulario;
-}
-
-#textoNosotros {
-  grid-area: textoNosotros;
-}
-
-#imagenNosotros {
-  grid-area: imagenNosotros;
-}
+  margin: 0; }
 
 #graficaVehicular {
-  grid-area: graficaVehicular;
-}
+  grid-area: graficaVehicular; }
 
 #cambioColor {
-  grid-area: cambioColor;
-}
+  grid-area: cambioColor; }
 
 #carouselExampleControls {
-  grid-area: carrusel;
-}
+  grid-area: carrusel; }
 
 nav {
-  grid-area: nav;
-}
+  grid-area: nav; }
 
 header {
-  grid-area: header;
-}
+  grid-area: header; }
 
 #imagenPortada {
-  grid-area: imagenPortada;
-}
+  grid-area: imagenPortada; }
 
 #tituloCambioColor {
-  grid-area: tituloCambioColor;
-}
+  grid-area: tituloCambioColor; }
 
 section#imagenCambioColor {
-  grid-area: imagenCambioColor;
-}
+  grid-area: imagenCambioColor; }
 
 article#textoCambioColor {
-  grid-area: textoCambioColor;
-}
+  grid-area: textoCambioColor; }
 
 #tituloGraficaVehicular {
-  grid-area: tituloGraficaVehicular;
-}
+  grid-area: tituloGraficaVehicular; }
 
 section#imagenGraficaVehicular {
-  grid-area: imagenGraficaVehicular;
-}
+  grid-area: imagenGraficaVehicular; }
 
 article#textoGraficaVehicular {
-  grid-area: textoGraficaVehicular;
-}
+  grid-area: textoGraficaVehicular; }
 
 .links {
   background-image: linear-gradient(to right, black, gray, black);
@@ -240,16 +109,14 @@ article#textoGraficaVehicular {
   height: 50px;
   padding: 10px 5px 15px 5px;
   text-align: center;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .lista__links {
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  align-self: center;
-}
+  align-self: center; }
 
 .lista__links__elementos {
   display: inline-block;
@@ -257,14 +124,12 @@ article#textoGraficaVehicular {
   font-size: 25px;
   color: blanchedalmond;
   margin-left: 10px;
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 .contacto {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .contacto__elemento {
   margin: 50px;
@@ -272,49 +137,40 @@ article#textoGraficaVehicular {
   background-color: #464646;
   color: #000000;
   width: 320px;
-  height: 320px;
-}
+  height: 320px; }
 
-.fila1,
-.fila2 {
+.fila1, .fila2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 5vh;
   grid-area: fila1;
-  justify-items: center;
-}
+  justify-items: center; }
 
 .fila2 {
-  grid-area: fila2;
-}
+  grid-area: fila2; }
 
 .imagen__trabajo {
   height: 300px;
   width: 400px;
-  transition: 1.5s;
-}
+  transition: 1.5s; }
 
 .imagen__trabajo:hover {
   height: 450px;
-  width: 600px;
-}
+  width: 600px; }
 
 input:focus {
   width: 150px;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 #imagenUpGrafica {
   width: 650px;
   height: 400px;
-  transition: 1.5s;
-}
+  transition: 1.5s; }
 
 #imagenUpGrafica:hover {
   height: 550px;
   width: 800px;
-  transform: translate(150px, 0px);
-}
+  transform: translate(150px, 0px); }
 
 #titulo {
   display: inline-block;
@@ -325,79 +181,64 @@ input:focus {
   word-spacing: 5px;
   width: 600px;
   height: 150px;
+  margin: 20px 30px 25px 5px;
+  padding: 15px 10px 15px 5px;
   animation-duration: 1s;
-  animation-name: backInDown;
-  margin: 1px;
-  padding: 1px;
-}
+  animation-name: backInDown; }
 
 .subtitulo {
   color: rgba(255, 0, 43, 0.603);
   text-transform: capitalize;
   letter-spacing: 4px;
-  word-spacing: 4px;
-}
+  word-spacing: 4px; }
 
 h2 {
   color: seashell;
-  background-image: linear-gradient(to right, black, gray, black);
-}
+  background-image: linear-gradient(to right, black, gray, black); }
 
 h3 {
   color: seashell;
-  background-image: linear-gradient(to right, black, gray, black);
-}
+  background-image: linear-gradient(to right, black, gray, black); }
 
 ul ul {
   position: absolute;
-  display: none;
-}
-
-ul ul li {
-  display: block;
-}
+  display: none; }
+  ul ul li {
+    display: block; }
 
 ul li:hover ul {
   display: block;
   background-color: #464646;
-  width: 250%;
-}
+  width: 270px; }
 
 ul li a:hover {
   background-color: blanchedalmond;
-  color: #22bdfa;
-}
+  color: #22bdfa; }
 
 a {
   text-decoration: none;
-  color: coral;
-}
+  color: coral; }
 
 .preguntasFrecuentes {
   color: seashell;
   text-align: left;
-  list-style-type: disc;
-}
+  list-style-type: disc; }
 
 article {
-  color: seashell;
-}
+  color: seashell; }
 
 footer {
   color: black;
   background-image: linear-gradient(to right, black, gray, black);
   bottom: 0%;
   width: 100%;
-  grid-area: footer;
-}
+  grid-area: footer; }
 
 .sector {
   color: #fffb0f;
   text-decoration: underline;
   letter-spacing: 3px;
-  background-color: #464646;
-}
+  background-color: #464646; }
 
 p {
-  color: seashell;
-}
+  color: seashell; }
