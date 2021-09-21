@@ -219,12 +219,12 @@ input:focus {
 
 #titulo {
   display: inline-block;
-  font-size: 75px;
-  color: #22bdfa;
+  font-size: 90px;
+  color: coral;
   text-decoration: underline;
   letter-spacing: 5px;
   word-spacing: 5px;
-  width: 600px;
+  width: 700px;
   height: 150px;
   margin: 20px 30px 25px 5px;
   padding: 15px 10px 15px 5px;
@@ -232,7 +232,7 @@ input:focus {
   animation-name: backInDown; }
 
 .subtitulo {
-  color: rgba(255, 0, 43, 0.603);
+  color: #ce0728;
   text-transform: capitalize;
   letter-spacing: 4px;
   word-spacing: 4px; }
@@ -254,7 +254,7 @@ ul ul {
 ul li:hover ul {
   display: block;
   background-color: #464646;
-  width: 270px; }
+  width: 330px; }
 
 ul li a:hover {
   background-color: blanchedalmond;
@@ -270,7 +270,9 @@ a {
   list-style-type: disc; }
 
 article {
-  color: seashell; }
+  color: seashell;
+  margin: 30px;
+  padding-right: 15%; }
 
 footer {
   color: black;
@@ -278,12 +280,6 @@ footer {
   bottom: 0%;
   width: 100%;
   grid-area: footer; }
-
-.sector {
-  color: #fffb0f;
-  text-decoration: underline;
-  letter-spacing: 3px;
-  background-color: #464646; }
 
 p {
   color: seashell; }
