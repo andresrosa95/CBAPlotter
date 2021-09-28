@@ -6,7 +6,7 @@ body {
   font-style: oblique;
   font-weight: bold;
   font-size: 110%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   background-image: url(../assets/img/fondo.png);
   background-repeat: repeat;
@@ -22,10 +22,10 @@ body {
 @keyframes backInDown {
   0% {
     transform: translateY(-1200px) scale(2);
-    opacity: .7; }
+    opacity: 0.7; }
   80% {
     transform: translateY(0px) scale(0.7);
-    opacity: .7; }
+    opacity: 0.7; }
   100% {
     transform: scale(1);
     opacity: 1; } }
@@ -283,3 +283,15 @@ footer {
 
 p {
   color: seashell; }
+
+.accordion {
+  background-color: crimson; }
+
+.accordion-item {
+  background-color: #14dc6e; }
+
+.accordion-header {
+  background-color: #1714dc; }
+
+.accordion-button {
+  background-color: #fbff00; }

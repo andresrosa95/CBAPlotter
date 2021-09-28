@@ -1,4 +1,4 @@
-$color-fondo: linear-gradient(to right, black, gray,black);
+$color-fondo: linear-gradient(to right, black, gray, black);
 
 * {
     margin: 0;
@@ -9,9 +9,9 @@ body {
     font-style: oblique;
     font-weight: bold;
     font-size: 110%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align: center; 
-    background-image: url(../assets/img/fondo.png) ;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    background-image: url(../assets/img/fondo.png);
     background-repeat: repeat;
     animation-duration: 1.5s;
     animation-name: aparecer;
@@ -30,12 +30,12 @@ body {
 @keyframes backInDown {
     0% {
         transform: translateY(-1200px) scale(2);
-        opacity: .7;
+        opacity: 0.7;
     }
 
     80% {
-        transform: translateY(0px) scale(.7);
-        opacity: .7;
+        transform: translateY(0px) scale(0.7);
+        opacity: 0.7;
     }
 
     100% {
@@ -106,13 +106,13 @@ body {
     display: grid;
     align-items: left;
     grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "cambioColor cambioColor cambioColor"
-    "fila1 fila1 fila1"
-    "graficaVehicular graficaVehicular graficaVehicular"
-    "fila2 fila2 fila2"
-    "footer footer footer";
+        "nav nav nav"
+        "header header header"
+        "cambioColor cambioColor cambioColor"
+        "fila1 fila1 fila1"
+        "graficaVehicular graficaVehicular graficaVehicular"
+        "fila2 fila2 fila2"
+        "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-row-gap: 2vh;
@@ -124,69 +124,68 @@ body {
     display: grid;
     align-items: left;
     grid-template-areas:
-      "nav nav nav"
-      "header header header"
-      "textoNosotros textoNosotros textoNosotros"
-      "imagenNosotros imagenNosotros imagenNosotros"
-      "footer footer footer";
+        "nav nav nav"
+        "header header header"
+        "textoNosotros textoNosotros textoNosotros"
+        "imagenNosotros imagenNosotros imagenNosotros"
+        "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-row-gap: 2vh;
     height: 100vh;
     margin: 0;
-  }
-  
-  #principalContacto {
+}
+
+#principalContacto {
     display: grid;
     align-items: left;
     grid-template-areas:
-      "nav nav nav"
-      "header header header"
-      "tituloFormulario tituloFormulario tituloFormulario"
-      "contenidoFormulario contenidoFormulario contenidoFormulario"
-      "footer footer footer";
+        "nav nav nav"
+        "header header header"
+        "tituloFormulario tituloFormulario tituloFormulario"
+        "contenidoFormulario contenidoFormulario contenidoFormulario"
+        "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-row-gap: 2vh;
     height: 100vh;
     margin: 0;
-  }
-  
-  #principalFaq {
+}
+
+#principalFaq {
     display: grid;
     align-items: left;
     grid-template-areas:
-    "nav nav nav"
-    "header header header"
-    "accordion accordion accordion"
-    "footer footer footer";
+        "nav nav nav"
+        "header header header"
+        "accordion accordion accordion"
+        "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-row-gap: 2vh;
     height: 100vh;
     margin: 0;
-  }
-  
-  .accordion {
+}
+
+.accordion {
     grid-area: accordion;
-  }
-  
-  .contacto {
+}
+
+.contacto {
     grid-area: contenidoFormulario;
-  }
-  
-  #tituloFormulario {
+}
+
+#tituloFormulario {
     grid-area: tituloFormulario;
-  }
-  
-  #textoNosotros {
+}
+
+#textoNosotros {
     grid-area: textoNosotros;
-  }
-  
-  #imagenNosotros {
+}
+
+#imagenNosotros {
     grid-area: imagenNosotros;
-  }
-  
+}
 
 #graficaVehicular {
     grid-area: graficaVehicular;
@@ -283,7 +282,7 @@ article#textoGraficaVehicular {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 5vh;
     grid-area: fila1;
-    justify-items:center;
+    justify-items: center;
 }
 
 .fila2 {
@@ -301,8 +300,8 @@ $alto: 300px;
 }
 
 .imagen__trabajo:hover {
-    height: $alto*1.5;
-    width: $ancho*1.5;
+    height: $alto * 1.5;
+    width: $ancho * 1.5;
 }
 
 input:focus {
@@ -358,20 +357,23 @@ ul {
     ul {
         position: absolute;
         display: none;
+
         li {
-        display: block;
+            display: block;
         }
     }
-        li:hover ul {
-            display: block;
-            background-color: rgb(70, 70, 70);
-            width: 330px;
+
+    li:hover ul {
+        display: block;
+        background-color: rgb(70, 70, 70);
+        width: 330px;
+    }
+
+    li a:hover {
+        background-color: blanchedalmond;
+        color: #22bdfa;
+    }
 }
-        li a:hover {
-            background-color: blanchedalmond;
-            color: #22bdfa;
-        }
-        }
 
 a {
     text-decoration: none;
@@ -392,7 +394,7 @@ article {
 
 footer {
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(to right, black, gray,black);
+    background-image: linear-gradient(to right, black, gray, black);
     bottom: 0%;
     width: 100%;
     grid-area: footer;
@@ -400,4 +402,20 @@ footer {
 
 p {
     color: seashell;
+}
+
+.accordion {
+    background-color: crimson;
+}
+
+.accordion-item {
+    background-color: rgb(20, 220, 110);
+}
+
+.accordion-header {
+    background-color: rgb(23, 20, 220);
+}
+
+.accordion-button {
+    background-color: rgb(251, 255, 0);
 }
