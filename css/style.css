@@ -13,6 +13,7 @@ body {
   animation-duration: 1.5s;
   animation-name: aparecer; }
 
+/* ---------------------ANIMACIONES------------------------- */
 @keyframes aparecer {
   0% {
     opacity: 0; }
@@ -36,6 +37,7 @@ body {
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out; }
 
+/* -------------INDEX---------------*/
 #principalIndex {
   display: grid;
   align-items: left;
@@ -56,6 +58,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas: "nav" "header" "carrusel" "tituloCambioColor" "imagenCambioColor" "textoCambioColor" "tituloGraficaVehicular" "imagenGraficaVehicular" "textoGraficaVehicular" "footer"; } }
 
+/* -------------TRABAJOS---------------*/
 #principalTrabajos {
   display: grid;
   align-items: left;
@@ -66,6 +69,7 @@ body {
   height: 100vh;
   margin: 0; }
 
+/* -------------NOSOTROS---------------*/
 #principalNosotros {
   display: grid;
   align-items: left;
@@ -76,6 +80,7 @@ body {
   height: 100vh;
   margin: 0; }
 
+/* -------------CONTACTO---------------*/
 #principalContacto {
   display: grid;
   align-items: left;
@@ -86,6 +91,7 @@ body {
   height: 100vh;
   margin: 0; }
 
+/* -------------FAQs---------------*/
 #principalFaq {
   display: grid;
   align-items: left;
@@ -235,7 +241,8 @@ input:focus {
   color: #ce0728;
   text-transform: capitalize;
   letter-spacing: 4px;
-  word-spacing: 4px; }
+  word-spacing: 4px;
+  font-weight: bolder; }
 
 h2 {
   color: seashell;
@@ -285,13 +292,12 @@ p {
   color: seashell; }
 
 .accordion {
-  background-color: crimson; }
+  color: azure; }
 
 .accordion-item {
-  background-color: #14dc6e; }
-
-.accordion-header {
-  background-color: #1714dc; }
+  background-color: black;
+  color: azure; }
 
 .accordion-button {
-  background-color: #fbff00; }
+  background-image: linear-gradient(to right, black, gray, black);
+  color: azure; }

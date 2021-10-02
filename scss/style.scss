@@ -17,6 +17,8 @@ body {
     animation-name: aparecer;
 }
 
+/* ---------------------ANIMACIONES------------------------- */
+
 @keyframes aparecer {
     0% {
         opacity: 0;
@@ -50,6 +52,8 @@ body {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
 }
+
+/* -------------INDEX---------------*/
 
 #principalIndex {
     display: grid;
@@ -102,6 +106,9 @@ body {
     }
 }
 
+
+/* -------------TRABAJOS---------------*/
+
 #principalTrabajos {
     display: grid;
     align-items: left;
@@ -120,6 +127,9 @@ body {
     margin: 0;
 }
 
+
+/* -------------NOSOTROS---------------*/
+
 #principalNosotros {
     display: grid;
     align-items: left;
@@ -136,6 +146,8 @@ body {
     margin: 0;
 }
 
+/* -------------CONTACTO---------------*/
+
 #principalContacto {
     display: grid;
     align-items: left;
@@ -151,6 +163,9 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+
+/* -------------FAQs---------------*/
 
 #principalFaq {
     display: grid;
@@ -341,6 +356,7 @@ input:focus {
     text-transform: capitalize;
     letter-spacing: 4px;
     word-spacing: 4px;
+    font-weight: bolder;
 }
 
 h2 {
@@ -356,7 +372,7 @@ h3 {
 ul {
     ul {
         position: absolute;
-        display: none;
+        display: none;  
 
         li {
             display: block;
@@ -405,17 +421,15 @@ p {
 }
 
 .accordion {
-    background-color: crimson;
+    color: azure;
 }
 
 .accordion-item {
-    background-color: rgb(20, 220, 110);
-}
-
-.accordion-header {
-    background-color: rgb(23, 20, 220);
+    background-color: rgb(0, 0, 0);
+    color: azure;
 }
 
 .accordion-button {
-    background-color: rgb(251, 255, 0);
+    background-image: linear-gradient(to right, black, gray, black);
+    color: azure;
 }
