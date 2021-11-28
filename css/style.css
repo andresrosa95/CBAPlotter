@@ -91,6 +91,17 @@ body {
   height: 100vh;
   margin: 0; }
 
+/* -------------COTIZADOR---------------*/
+#principalCotiza {
+  display: grid;
+  align-items: left;
+  grid-template-areas: "nav nav nav" "header header header" "tituloFormulario tituloFormulario tituloFormulario" "contenidoFormulario contenidoFormulario contenidoFormulario" "wishlist wishlist wishlist" "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 2vh;
+  height: 100vh;
+  margin: 0; }
+
 /* -------------FAQs---------------*/
 #principalFaq {
   display: grid;
@@ -110,6 +121,9 @@ body {
 
 #tituloFormulario {
   grid-area: tituloFormulario; }
+
+#wishList {
+  grid-area: wishlist; }
 
 #textoNosotros {
   grid-area: textoNosotros; }
@@ -190,6 +204,25 @@ article#textoGraficaVehicular {
   width: 320px;
   height: 320px; }
 
+.cotizador__elemento {
+  margin: 50px;
+  display: inline-block;
+  background-color: black;
+  color: #ffffff;
+  width: 400px;
+  height: 390px; }
+
+#wishListDom {
+  margin: 1px;
+  display: inline-block;
+  background-color: #464646;
+  color: #ffffff;
+  width: 1200px;
+  height: 140px; }
+
+#cotiMensaje {
+  color: coral; }
+
 .fila1, .fila2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -245,10 +278,6 @@ input:focus {
   font-weight: bolder; }
 
 h2 {
-  color: seashell;
-  background-image: linear-gradient(to right, black, gray, black); }
-
-h3 {
   color: seashell;
   background-image: linear-gradient(to right, black, gray, black); }
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Contactate con nosotros a traves de nuestro formulario.">
+    <meta name="keywords" content="Contacto, mail, ubicación, formulario, teléfono, dirección ">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>CBAPLOTTER Contacto</title>
+</head>
+
+<body>
+    <div id="principalCotiza">
+        <nav class="links">
+            <ul class="lista__links">
+                <li class="lista__links__elementos"><a href="./index.html">INICIO</a></li>
+                <li class="lista__links__elementos"><a href="./trabajos.html">TRABAJOS</a>
+                    <ul>
+                        <li><a href="./trabajos.html#cambioColor">CAMBIO DE COLOR</a></li>
+                        <li><a href="./trabajos.html#graficaVehicular">GRAFICA VEHICULAR</a></li>
+                </li>
+            </ul>
+            <li class="lista__links__elementos"><a href="./cotiza.html">COTIZADOR</a></li>
+            <li class="lista__links__elementos"><a href="./nosotros.html">NOSOTROS</a></li>
+            <li class="lista__links__elementos"><a href="./contacto.html">CONTACTO</a></li>
+            <li class="lista__links__elementos"><a href="./preguntasFrecuentes.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="titulo">CBA PLOTTER</h1>
+            <h2 class="subtitulo">cotizador</h2>
+        </header>
+
+        <div id="tituloFormulario">
+            <p>Obtené una cotización aproximada de la manera mas rápida!</p>
+        </div>
+        <div class="contacto">
+            <div id="formulario" class="cotizador__elemento">
+                <form action="" method="GET">
+                    <label for="Nombre">Nombre:</label>
+                    <input id="nombre" type="text">
+                    <br>
+                    <label for="Apellido">Apellido</label>
+                    <input id="apellido" type="text">
+                    <br>
+                    <label for="Mail">E-mail</label>
+                    <input id="email" type="text">
+                    <br>
+                    <br>
+                    <div>¿Sos cliente de CBA Plotter?*</div>
+                    <select name="Servicio" id="clientesino">
+                        <option value="Si">SI</option>
+                        <option value="No">NO</option>
+                    </select>
+                    <div>¿Que servicio te interesa?</div>
+                    <select name="Servicio" id="elegirServicio">
+                        <option value="Cambio de Color">Cambio de Color</option>
+                        <option value="Grafica Vehicular">Gráfica Vehicular</option>
+                    </select>
+                    <div>¿Que tipo de vehículo tenes?</div>
+                    <select name="Vehiculo" id="elegirVehiculo">
+                        <option value="Hatckback/Bi-cuerpo">Hatckback/Bi-cuerpo</option>
+                        <option value="Sedan/Tri-cuerpo">Sedan/Tri-cuerpo</option>
+                        <option value="Familiar/Monovolumen/Utilitario Pequeño">Familiar/Monovolumen/Utilitario Pequeño
+                        </option>
+                        <option value="Pick up/Camioneta/Todoterreno">Pick up/Camioneta/Todoterreno</option>
+                        <option value="Utilitario Grande/Traffic">Utilitario Grande/Traffic</option>
+                        <option value="Camión/Colectivo">Camión/Colectivo</option>
+                    </select>
+                    <br>
+                    <br>
+                    <input type="submit" value="Cotizar">
+                    <input type="reset">
+                </form>
+                *Clientes CBAplotter poseen 10% de descuento en efectivo.
+            </div>
+            <div id="textonuevo" class="cotizador__elemento">
+                <div id="infoNueva">Cotizador CBAPlotter</div>
+                <div><button id="botonCotizacion">Ver última cotizacion</button></div>
+            </div>
+
+
+            
+        </div>
+        <div id="wishList" ></div>
+        
+        <footer>
+            <em>CBA Plotter Copyright 2021</em>
+            <br />
+
+            <a href="https://www.instagram.com/"><img src="./assets/img/logos/instagram.png" alt="instagram-logo"
+                    height="40" width="40" /></a>
+            <a href="https://www.facebook.com/"><img src="./assets/img/logos/facebook.png" alt="facebook-logo"
+                    height="40" width="40" /></a>
+            <a href="https://twitter.com/home?lang=es"><img src="./assets/img/logos/twitter.png" alt="twitter-logo"
+                    height="40" width="40" /></a>
+            <a href="https://www.youtube.com/"><img src="./assets/img/logos/youtube.png" alt="youtube-logo" height="40"
+                    width="40" /></a>
+            <a href="https://www.linkedin.com/in/andresrosaperfil/"><img src="./assets/img/logos/linkedin.png"
+                    alt="linkedin-logo" height="40" width="40" /></a>
+        </footer>
+    </div>
+
+    <script src="./js/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+    </script>
+    <script src="js/cotizador.js"> </script>
+</body>
+
+</html>
