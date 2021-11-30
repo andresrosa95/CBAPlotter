@@ -1,0 +1,15 @@
+{
+  "servicio": {
+    "Cambio de Color": 30000,
+    "Grafica Vehicular": 25000
+  },
+  "vehiculo": {
+    "Hatckback/Bi-cuerpo": 1,
+    "Sedan/Tri-cuerpo": 1.25,
+    "Familiar/Monovolumen/Utilitario Pequeño": 1.5,
+    "Pick up/Camioneta/Todoterreno": 1.75,
+    "Utilitario Grande/Traffic": 2,
+    "Camión/Colectivo": 3
+
+  }
+}

@@ -1,4 +1,4 @@
-//Creacion de la Clase DatosPresupuesto
+//Declaracion de la Clase DatosPresupuesto
 
 class DatosPresupuesto {
     constructor(nombre, apellido, email, cliente, servicio, vehiculo) {
@@ -11,7 +11,7 @@ class DatosPresupuesto {
     }
 }
 
-//Creacion de la Clase Cotizador
+//Declaracion de la Clase Cotizador
 
 class Cotizador {
 
@@ -33,10 +33,11 @@ class Cotizador {
         this.datosPresupuesto = datosPresupuesto
     }
 
-// Funcion para calcular el precio de la cotizacion teniendo en cuenta el tipo de vehiculo, el servicio y si es o no cliente
+    // Funcion para calcular el precio de la cotizacion teniendo en cuenta el tipo de vehiculo, el servicio y si es o no cliente
 
     cotizar() {
-        const precioBase = this.servicio[this.datosPresupuesto.servicio] * this.vehiculo[this.datosPresupuesto
+        console.log("Hola"+ JSON.stringify( dataBase.servicio))
+        const precioBase = dataBase.servicio[this.datosPresupuesto.servicio] * dataBase.vehiculo[this.datosPresupuesto
             .vehiculo]
         return this.datosPresupuesto.cliente == "Si" ? precioBase * 0.9 : precioBase
     }
@@ -47,21 +48,22 @@ $("#formulario").submit(function (e) {
     procesarFormulario(e)
 })
 
-
-let cotizacion
-let contenedor = $("#infoNueva");
-
+let dataBase
+leerBaseDatos();
 
 $(document).ready(function () {
     console.log("El DOM esta listo");
 });
+
+// Funcion principal de lectura, validacion y presentacion de la informacion en el DOM
 
 function procesarFormulario(e) {
     e.preventDefault();
     let form = leerFormulario(e);
     if (validarFormulario(form)) {
         let datosPresupuesto = crearDatosPresupuesto(form);
-        presentarEnElDom(datosPresupuesto);
+        let precioCot = new Cotizador(datosPresupuesto).cotizar();
+        presentarEnElDom(datosPresupuesto, precioCot);
     }
 }
 
@@ -81,7 +83,6 @@ function validarFormulario(form) {
 }
 
 
-
 function agregarErrorAlDom(campoErroneo) {
     $("#infoNueva").html(`Revisar ${campoErroneo}`);
 }
@@ -98,14 +99,14 @@ function validarEmail(email) {
     return validarPalabra(email) && email.includes("@");
 }
 
-// Agregamos la informacion del formulario a DatosPresupuesto
+// Creamos un objeto especifico para representar datos de un presupuesto
 
 function crearDatosPresupuesto(form) {
     return new DatosPresupuesto(form.nombre, form.apellido, form.email, form.cliente, form.servicio,
         form.vehiculo);
 }
 
-// Obtenemos la informacion del Formulario
+// Funcion que lee la informacion del formulario
 
 function leerFormulario(e) {
     e.preventDefault();
@@ -122,8 +123,7 @@ function leerFormulario(e) {
 
 // Definimos el mensaje al presionar el boton Cotizar y todos los otros eventos que surgen de el
 
-function presentarEnElDom(datosPresupuesto) {
-    let precioCot = new Cotizador(datosPresupuesto).cotizar()
+function presentarEnElDom(datosPresupuesto, precioCot) {
 
     let mensajeCotizacion =
         `<h3 id="mensajeCoti" style="display: none" >Hola ${datosPresupuesto.nombre}!! Gracias por utilizar el cotizador!
@@ -144,7 +144,7 @@ function presentarEnElDom(datosPresupuesto) {
         $("#wishList").show();
 
         $("#wishList").html(`<div id="wishListDom" style="display: none" ><p>Tu WishList</p> <button id="botonEnviar"> ENVIAR</button> <button id="botonEliminar">ELIMINAR</button> <br> 
-    <p>Servicio: ${datosPresupuesto.servicio} para Vehículo del tipo ${datosPresupuesto.vehiculo} --- $${precioCot}  </p> <div id="cotiEnviada"></div></div>`);
+        <p>Servicio: ${datosPresupuesto.servicio} para Vehículo del tipo ${datosPresupuesto.vehiculo} --- $${precioCot}  </p> <div id="cotiEnviada"></div></div>`);   
         
         // Definimos el evento del boton Enviar
 
@@ -169,14 +169,15 @@ function presentarEnElDom(datosPresupuesto) {
     localStorage.setItem('mensajeCotizacion', mensajeCotizacion)
 }
 
-// Definimos el evento del boton Cotizar
+// Recuperamos la ultima cotizacion en local y actualizamos el DOM
 
-$(`#botonCotizacion`).on('click', function () {
+$(`#botonUltimaCotizacion`).on('click', function () {
     let localMensajeCotizacion = localStorage.getItem('mensajeCotizacion');
     $("#infoNueva").html(localMensajeCotizacion);
     aplicarAnimaciones();
 
 });
+
 
 // Funcion con las Animaciones a aplicar
 
@@ -198,17 +199,13 @@ function aplicarAnimaciones() {
         .fadeIn(2000);
 }
 
-
-$(() => {
-
-    const URLOCAL = 'js/probando.json'
-    
-    $.get(URLOCAL, (response, status) => {
+function leerBaseDatos() {
+    const URLOCAL = 'js/database.json'
+   $.get(URLOCAL, (response, status) => {
         if (status == 'success') {
             console.log(response);
-            console.log(`hola ${response.precioCambioColor}`);
-            const multi = response.precioCambioColor
+            dataBase = response
         }
     })
-
-})
+    
+}

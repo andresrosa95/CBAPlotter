@@ -41,7 +41,14 @@ body {
 #principalIndex {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "carrusel carrusel carrusel" "tituloCambioColor tituloCambioColor tituloCambioColor" "imagenCambioColor imagenCambioColor textoCambioColor " "tituloGraficaVehicular tituloGraficaVehicular tituloGraficaVehicular" "imagenGraficaVehicular imagenGraficaVehicular textoGraficaVehicular" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "carrusel carrusel carrusel"
+ "tituloCambioColor tituloCambioColor tituloCambioColor"
+ "imagenCambioColor imagenCambioColor textoCambioColor "
+ "tituloGraficaVehicular tituloGraficaVehicular tituloGraficaVehicular"
+ "imagenGraficaVehicular imagenGraficaVehicular textoGraficaVehicular"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
@@ -51,18 +58,40 @@ body {
 @media only screen and (max-width: 1024px) {
   #principalIndex {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nav nav " "header header" "carrusel carrusel" "tituloCambioColor tituloCambioColor" "imagenCambioColor textoCambioColor" "tituloGraficaVehicular tituloGraficaVehicular" "imagenGraficaVehicular textoGraficaVehicular" "footer footer"; } }
+    grid-template-areas: "nav nav "
+ "header header"
+ "carrusel carrusel"
+ "tituloCambioColor tituloCambioColor"
+ "imagenCambioColor textoCambioColor"
+ "tituloGraficaVehicular tituloGraficaVehicular"
+ "imagenGraficaVehicular textoGraficaVehicular"
+ "footer footer"; } }
 
 @media only screen and (max-width: 768px) {
   #principalIndex {
     grid-template-columns: 1fr;
-    grid-template-areas: "nav" "header" "carrusel" "tituloCambioColor" "imagenCambioColor" "textoCambioColor" "tituloGraficaVehicular" "imagenGraficaVehicular" "textoGraficaVehicular" "footer"; } }
+    grid-template-areas: "nav"
+ "header"
+ "carrusel"
+ "tituloCambioColor"
+ "imagenCambioColor"
+ "textoCambioColor"
+ "tituloGraficaVehicular"
+ "imagenGraficaVehicular"
+ "textoGraficaVehicular"
+ "footer"; } }
 
 /* -------------TRABAJOS---------------*/
 #principalTrabajos {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "cambioColor cambioColor cambioColor" "fila1 fila1 fila1" "graficaVehicular graficaVehicular graficaVehicular" "fila2 fila2 fila2" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "cambioColor cambioColor cambioColor"
+ "fila1 fila1 fila1"
+ "graficaVehicular graficaVehicular graficaVehicular"
+ "fila2 fila2 fila2"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
@@ -73,7 +102,11 @@ body {
 #principalNosotros {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "textoNosotros textoNosotros textoNosotros" "imagenNosotros imagenNosotros imagenNosotros" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "textoNosotros textoNosotros textoNosotros"
+ "imagenNosotros imagenNosotros imagenNosotros"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
@@ -84,7 +117,11 @@ body {
 #principalContacto {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "tituloFormulario tituloFormulario tituloFormulario" "contenidoFormulario contenidoFormulario contenidoFormulario" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "tituloFormulario tituloFormulario tituloFormulario"
+ "contenidoFormulario contenidoFormulario contenidoFormulario"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
@@ -95,7 +132,12 @@ body {
 #principalCotiza {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "tituloFormulario tituloFormulario tituloFormulario" "contenidoFormulario contenidoFormulario contenidoFormulario" "wishlist wishlist wishlist" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "tituloFormulario tituloFormulario tituloFormulario"
+ "contenidoFormulario contenidoFormulario contenidoFormulario"
+ "wishlist wishlist wishlist"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
@@ -106,7 +148,10 @@ body {
 #principalFaq {
   display: grid;
   align-items: left;
-  grid-template-areas: "nav nav nav" "header header header" "accordion accordion accordion" "footer footer footer";
+  grid-template-areas: "nav nav nav"
+ "header header header"
+ "accordion accordion accordion"
+ "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-row-gap: 2vh;
